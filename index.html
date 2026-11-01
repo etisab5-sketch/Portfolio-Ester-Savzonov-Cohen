@@ -122,7 +122,7 @@
         </nav>
 
         <!-- Download CV Action (Updated CV) -->
-        <a href="assets/cv/Esther_Sabzonov_Cohen_CV.pdf" target="_blank" download="אסתר_סבזונוב_כהן_קורות_חיים.pdf" id="cvBtn" 
+        <a href="cv/Esther_Sabzonov_Cohen_CV.pdf" target="_blank" download="אסתר_סבזונוב_כהן_קורות_חיים.pdf" id="cvBtn" 
            class="inline-flex items-center gap-2 px-3.5 py-2 text-xs md:text-sm font-medium tracking-wide text-brand-rose bg-brand-rose-muted hover:bg-brand-rose hover:text-brand-black border border-brand-rose/40 rounded transition-all duration-200 shadow-sm">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
@@ -338,7 +338,7 @@
       <!-- Links & Copyright -->
       <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-brand-subtle gap-4">
         <div class="flex items-center gap-6">
-          <a href="assets/cv/Esther_Sabzonov_Cohen_CV.pdf" target="_blank" download="אסתר_סבזונוב_כהן_קורות_חיים.pdf" class="hover:text-brand-rose transition-colors">הורדת קורות חיים (PDF)</a>
+          <a href="cv/Esther_Sabzonov_Cohen_CV.pdf" target="_blank" download="אסתר_סבזונוב_כהן_קורות_חיים.pdf" class="hover:text-brand-rose transition-colors">הורדת קורות חיים (PDF)</a>
           <a href="mailto:etisab13@gmail.com" class="hover:text-brand-rose transition-colors">שליחת דוא״ל</a>
           <a href="tel:0524033461" class="hover:text-brand-rose transition-colors">טלפון</a>
         </div>
@@ -375,7 +375,7 @@
             </button>
 
             <!-- Direct PDF Action Button in Modal Header -->
-            <a id="modalPdfBtn" href="#" target="_blank" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-brand-surface hover:bg-brand-rose hover:text-brand-black text-brand-rose border border-brand-rose/40 text-xs transition-colors">
+            <a id="modalPdfBtn" href="#" target="_blank" onclick="smartOpenPdf(event, this.href)" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-brand-surface hover:bg-brand-rose hover:text-brand-black text-brand-rose border border-brand-rose/40 text-xs transition-colors">
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
               <span>צפייה בתוכניות המלאות (PDF)</span>
             </a>
@@ -402,7 +402,7 @@
               <h3 id="modalTitle" class="text-2xl sm:text-3xl md:text-4xl font-light text-white tracking-tight">שם הפרויקט</h3>
             </div>
             
-            <a id="modalHeroPdfLink" href="#" target="_blank" class="self-start md:self-auto px-4 py-2 rounded bg-brand-rose text-brand-black hover:bg-brand-rose-light text-xs font-medium transition-all shadow-lg flex items-center gap-2">
+            <a id="modalHeroPdfLink" href="#" target="_blank" onclick="smartOpenPdf(event, this.href)" class="self-start md:self-auto px-4 py-2 rounded bg-brand-rose text-brand-black hover:bg-brand-rose-light text-xs font-medium transition-all shadow-lg flex items-center gap-2">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
               <span>פתיחת תוכניות ושרטוטים (PDF)</span>
             </a>
@@ -492,7 +492,7 @@
             <span id="modalFooterNote">התוכניות המלאות זמינות בפורמט PDF איכותי לכל קומה ומבנה.</span>
           </div>
           <div class="flex items-center gap-3">
-            <a id="modalBottomPdfBtn" href="#" target="_blank" class="px-4 py-2 rounded text-xs bg-brand-rose text-brand-black hover:bg-brand-rose-light font-medium transition-colors">
+            <a id="modalBottomPdfBtn" href="#" target="_blank" onclick="smartOpenPdf(event, this.href)" class="px-4 py-2 rounded text-xs bg-brand-rose text-brand-black hover:bg-brand-rose-light font-medium transition-colors">
               פתיחת תוכניות מקוריות (PDF)
             </a>
             <button onclick="closeModal()" class="px-4 py-2 rounded text-xs bg-brand-surface hover:bg-brand-border text-brand-light transition-colors">
@@ -538,53 +538,53 @@
         scale: "אולם רב-תכליתי + 345 מקומות ישיבה",
         role: "תכנון ומידול הפרויקט הכולל הדמיות ועיצוב החלל",
         tools: "Revit BIM, AutoCAD, Enscape",
-        coverImage: "assets/projects/harish-sports-hall/exterior-night.jpg",
-        pdfUrl: "assets/projects/harish-sports-hall/garmushka_harish_205.pdf",
+        coverImage: "harish-sports-hall/exterior-night.jpg",
+        pdfUrl: "harish-sports-hall/garmushka_harish_205.pdf",
         pdfNote: "הגרמושקה המלאה (PDF) להיתר בנייה כוללת 4 קומות, 5 חתכים, 4 חזיתות ופרטי יציעים.",
         shortDescription: "אולם ספורט בבית ספר בעיר חריש.",
         conceptNarrative: "תכנון אולם ספורט בית ספרי וקהילתי מתקדם במגרש 205 בעיר חריש. הפרויקט משלב בין אולם משחקים רב-תכליתי תקני לכדורסל וכדורעף, יציע מדורג מונגש בן 345 מושבים, מחיצה אקוסטית נפתחת לחלוקת פעילויות, חדרי שופטים ומזכירות, ממ״ד ומחסני ציוד ייעודיים.",
         challengeNarrative: "עיצוב פנים המשלב פרקט ספורטיבי איכותי, טריבונות ישיבה עם מדרכי בטון וכיסאות מעוצבים, ומערכות מיזוג וקירור תעשייתי חשופות הצמודות לקונסטרוקציית הגג. החזיתות משלבות פתחי הצללה ייחודיים מעץ וחלונות עליונים להחדרת אור יום מבוקר.",
         plansList: [
-          { label: "גרמושקה להיתר (PDF)", url: "assets/projects/harish-sports-hall/garmushka_harish_205.pdf" }
+          { label: "גרמושקה להיתר (PDF)", url: "harish-sports-hall/garmushka_harish_205.pdf" }
         ],
         media: [
           {
             type: "render",
             typeLabel: "צילום / הדמיה",
             title: "חזית המבנה הראשית בשעת בין ערביים - לוברים ותאורה",
-            url: "assets/projects/harish-sports-hall/exterior-night.jpg"
+            url: "harish-sports-hall/exterior-night.jpg"
           },
           {
             type: "render",
             typeLabel: "הדמיית פנים",
             title: "עיצוב חלל האולם, פרקט, מגרש משחקים וטריבונות",
-            url: "assets/projects/harish-sports-hall/interior-view-1.jpg"
+            url: "harish-sports-hall/interior-view-1.jpg"
           },
           {
             type: "render",
             typeLabel: "הדמיית פנים",
             title: "מבט פנורמי לחלל האולם, מערכות תאורה ומיזוג אוויר",
-            url: "assets/projects/harish-sports-hall/interior-view-2.jpg"
+            url: "harish-sports-hall/interior-view-2.jpg"
           },
           {
             type: "section",
             typeLabel: "חתך תלת-ממדי",
             title: "חתך פרספקטיבי המציג את היציע המדורג ומבנה האולם",
-            url: "assets/projects/harish-sports-hall/section-cutaway-1.jpg"
+            url: "harish-sports-hall/section-cutaway-1.jpg"
           },
           {
             type: "section",
             typeLabel: "חתך איזומטרי",
             title: "חתך אדריכלי מלא כולל שכבות הקרקע והקונסטרוקציה",
-            url: "assets/projects/harish-sports-hall/section-cutaway-2.jpg"
+            url: "harish-sports-hall/section-cutaway-2.jpg"
           },
           {
             type: "plan",
             typeLabel: "תוכניות הגשה",
             title: "גרמושקה להיתר: תוכניות 4 קומות, 5 חתכים ו-4 חזיתות (PDF)",
-            url: "assets/projects/harish-sports-hall/exterior-night.jpg",
+            url: "harish-sports-hall/exterior-night.jpg",
             isPdfLink: true,
-            pdfUrl: "assets/projects/harish-sports-hall/garmushka_harish_205.pdf",
+            pdfUrl: "harish-sports-hall/garmushka_harish_205.pdf",
             planFloor: "גרמושקה להיתר",
             planSheet: "סט מלא 4 קומות וחתכים",
             planScale: "קנ\"מ להיתר",
@@ -603,38 +603,38 @@
         scale: "קמפוס מלא כ-6,000 מ\"ר בנוי | 3 קומות + גג מערכות, 18 כיתות ומעבדות",
         role: "אדריכל אחראי (חתום בגליונות), מידול BIM מלא ב-Revit, תוכניות ביצוע 1:50 והדמיות",
         tools: "Autodesk Revit BIM, AutoCAD, Enscape",
-        coverImage: "assets/projects/harish-ulpana/render-courtyard-aerial.jpg",
-        pdfUrl: "assets/projects/harish-ulpana/plan-floor-1.pdf",
+        coverImage: "harish-ulpana/render-courtyard-aerial.jpg",
+        pdfUrl: "harish-ulpana/plan-floor-1.pdf",
         pdfNote: "סט תוכניות עבודה לביצוע (PDF): קומות א', ב', ג' ותוכנית גג בקנ\"מ 1:50 | קובץ מקור: Harish_205_אולפנה_G65+W6.rvt",
         shortDescription: "קמפוס אולפנה תיכונית לבנות מהמגזר החרדי בעיר חריש בהיקף של כ-6,000 מ\"ר. תכנון מותאם למגזר, פאטיו מרכזי, מעבדות ממ\"מ, גשרים, מרפסות ומגרשי ספורט.",
         conceptNarrative: "תכנון ומידול קמפוס אולפנה מקיף לבנות מהמגזר החרדי במגרש 205 בעיר חריש. הפרויקט תוכנן בקפידה כדי לתת מענה פדגוגי וקהילתי מלא ל-18 כיתות אם (שכבות ז'-יב') על פני כ-6,000 מ\"ר בנוי ב-3 קומות מעל הקרקע וקומת גג טכני. המבנה מאורגן בשני אגפי לימוד ראשיים המחוברים בגשרים ובמרפסות היקפיות סביב פאטיו פנימי מואר הפתוח לשמיים. הפרוגרמה כוללת מעבדות מדע וטכנולוגיה ממוגנות (ממ\"מ), כיתות חנ\"מ, חדרי למידה פרטנית וטיפולים, חללים משותפים רחבי ידיים עם מחיצות אקוסטיות נפתחות המאפשרות מודולריות מלאה, ופיתוח נופי מפותח עם מגרשי ספורט וטריבונות ישיבה מדורגות.",
         challengeNarrative: "התכנון האדריכלי נדרש להתאמה ייחודית ורגישה לצורכי המגזר החרדי ולדרישות הצניעות והפרטיות: יצירת מרחב פנימי מוגן באמצעות פאטיו, חלונות שירותים מזכוכית חלבית, רפפות אלומיניום ייחודיות (אלוקל) בחזיתות המעניקות הצללה ופרטיות לצד כניסת אור טבעי, כניסה מבוקרת וחלונות מסורגים עם מנגנון חילוץ. הופק סט מלא של תוכניות ביצוע ב-Revit בקנ\"מ 1:50 (קובץ מקור: Harish_205_אולפנה_G65+W6.rvt) תוך תיאום יועצים רב-תחומי מקיף: קונסטרוקציה (עומס תקרה נוסף 500 ק\"ג), אינסטלציה, חשמל, מיזוג אוויר (מערכות VRF/צ'ילרים בגג), בטיחות (דלתות הדף מוסדיות ת\"י 4422, פתחי שחרור עשן), בניה ירוקה ונגישות.",
         plansList: [
-          { label: "קומה א' — גליון 007 (1,970 מ\"ר)", url: "assets/projects/harish-ulpana/plan-floor-1.pdf" },
-          { label: "קומה ב' — גליון 008 (1,988 מ\"ר)", url: "assets/projects/harish-ulpana/plan-floor-2.pdf" },
-          { label: "קומה ג' — גליון 009 (1,988 מ\"ר)", url: "assets/projects/harish-ulpana/plan-floor-3.pdf" },
-          { label: "קומת גג ומערכות טכניות", url: "assets/projects/harish-ulpana/plan-roof.pdf" }
+          { label: "קומה א' — גליון 007 (1,970 מ\"ר)", url: "harish-ulpana/plan-floor-1.pdf" },
+          { label: "קומה ב' — גליון 008 (1,988 מ\"ר)", url: "harish-ulpana/plan-floor-2.pdf" },
+          { label: "קומה ג' — גליון 009 (1,988 מ\"ר)", url: "harish-ulpana/plan-floor-3.pdf" },
+          { label: "קומת גג ומערכות טכניות", url: "harish-ulpana/plan-roof.pdf" }
         ],
         media: [
           {
             type: "render",
             typeLabel: "הדמיית ממעוף ציפור",
             title: "מבט אווירי כולל: קמפוס האולפנה, מגרשי הספורט, הטריבונות והפיתוח הנופי",
-            url: "assets/projects/harish-ulpana/render-courtyard-aerial.jpg"
+            url: "harish-ulpana/render-courtyard-aerial.jpg"
           },
           {
             type: "render",
             typeLabel: "הדמיית חזיתות",
             title: "חזיתות המבנה, רפפות הצללה מאלומיניום (אלוקל), קומות הלימוד והחצר הפנימית",
-            url: "assets/projects/harish-ulpana/render-facades-elevation.jpg"
+            url: "harish-ulpana/render-facades-elevation.jpg"
           },
           {
             type: "plan",
             typeLabel: "תוכנית ביצוע 1:50",
             title: "קומה א' (גליון 007 לביצוע): כיתות ז'-ח', מעבדת מדע וטכנולוגיה, ממ\"מ, חדר טיפולים, פאטיו, מרפסות וגשר (1,970 מ\"ר)",
-            url: "assets/projects/harish-ulpana/render-courtyard-aerial.jpg",
+            url: "harish-ulpana/render-courtyard-aerial.jpg",
             isPdfLink: true,
-            pdfUrl: "assets/projects/harish-ulpana/plan-floor-1.pdf",
+            pdfUrl: "harish-ulpana/plan-floor-1.pdf",
             planFloor: "קומה א'",
             planSheet: "גליון 007 לביצוע",
             planScale: "קנ\"מ 1:50",
@@ -644,9 +644,9 @@
             type: "plan",
             typeLabel: "תוכנית ביצוע 1:50",
             title: "קומה ב' (גליון 008 לביצוע): כיתות ט'-יא', חללים רב-תכליתיים, חדרי מגמה, חדרי יועצת, פרטני, ממ\"מ מדע וטכנולוגיה (1,988 מ\"ר)",
-            url: "assets/projects/harish-ulpana/render-facades-elevation.jpg",
+            url: "harish-ulpana/render-facades-elevation.jpg",
             isPdfLink: true,
-            pdfUrl: "assets/projects/harish-ulpana/plan-floor-2.pdf",
+            pdfUrl: "harish-ulpana/plan-floor-2.pdf",
             planFloor: "קומה ב'",
             planSheet: "גליון 008 לביצוע",
             planScale: "קנ\"מ 1:50",
@@ -656,9 +656,9 @@
             type: "plan",
             typeLabel: "תוכנית ביצוע 1:50",
             title: "קומה ג' (גליון 009 לביצוע): כיתות י'-יב', חדרי מגמות ומדע, חללי למידה שכבתיים, מוקד לוגיסטי, פאטיו ומרפסות (1,988 מ\"ר)",
-            url: "assets/projects/harish-ulpana/render-courtyard-aerial.jpg",
+            url: "harish-ulpana/render-courtyard-aerial.jpg",
             isPdfLink: true,
-            pdfUrl: "assets/projects/harish-ulpana/plan-floor-3.pdf",
+            pdfUrl: "harish-ulpana/plan-floor-3.pdf",
             planFloor: "קומה ג'",
             planSheet: "גליון 009 לביצוע",
             planScale: "קנ\"מ 1:50",
@@ -668,9 +668,9 @@
             type: "plan",
             typeLabel: "תוכנית ביצוע 1:50",
             title: "קומת גג ומערכות טכניות: פתחי שחרור עשן, מערכות מיזוג וקירור, פירים ומעקות בטיחות (תקרה 500 ק\"ג עומס נוסף)",
-            url: "assets/projects/harish-ulpana/render-facades-elevation.jpg",
+            url: "harish-ulpana/render-facades-elevation.jpg",
             isPdfLink: true,
-            pdfUrl: "assets/projects/harish-ulpana/plan-roof.pdf",
+            pdfUrl: "harish-ulpana/plan-roof.pdf",
             planFloor: "קומת גג",
             planSheet: "תוכנית גג ומערכות",
             planScale: "קנ\"מ 1:50",
@@ -689,74 +689,74 @@
         scale: "קמפוס מבננים רב-שכבתי | כיתות M21, אמפיתיאטרון, חקלאות וגגות סולאריים",
         role: "תכנון, מידול Revit BIM מלא, הדמיות וסט תוכניות אדריכליות",
         tools: "Revit BIM, AutoCAD, Enscape",
-        coverImage: "assets/projects/afikei-hayarden/masterplan-aerial.jpg",
-        pdfUrl: "assets/projects/afikei-hayarden/plan-entrance-ground.pdf",
+        coverImage: "afikei-hayarden/masterplan-aerial.jpg",
+        pdfUrl: "afikei-hayarden/plan-entrance-ground.pdf",
         pdfNote: "סט תוכניות הגשה (PDF) כולל קומת כניסה וקרקע, קומה עליונה, קומה תחתונה ומבנן C.",
         shortDescription: "בית ספר חדשני שזכה במכרז משרד החינוך לבית ספר פורץ דרך באזור נהר הירדן.",
         conceptNarrative: "תכנון קמפוס חינוכי חדשני ופורץ דרך באזור נהר הירדן, זוכה מכרז משרד החינוך לבתי ספר מובילי חדשנות פדגוגית. התכנון מבוסס על שבירת המבנה המסורתי של מסדרונות סגורים ויצירת אשכולות מבננים עצמאיים סביב חצרות פנימיות פתוחות. כל מבנן כולל מרחב למידה גמיש (M21), כיתות פתוחות לנוף, מרפסות מרוצפות, אזורי למידת חוץ, וגגות פוטו-וולטאיים המייצרים אנרגיה ירוקה.",
         challengeNarrative: "התמודדות עם תנאי האקלים החמים של בקעת הירדן והטופוגרפיה המדורגת (מפלסים בטווח של מינוס 202.10 עד מינוס 206.00 מתחת לפני הים). הפתרון התכנוני התבסס על הצללות עץ עמוקות, פרגולות מרווחות, מסדרונות בריזה טבעית, אמפיתיאטרון טופוגרפי פתוח להתכנסות, וקירות תמך מעוגלים המשתלבים בטופוגרפיית העמק.",
         plansList: [
-          { label: "קומת כניסה וקרקע (PDF)", url: "assets/projects/afikei-hayarden/plan-entrance-ground.pdf" },
-          { label: "קומה עליונה (PDF)", url: "assets/projects/afikei-hayarden/plan-upper-floor.pdf" },
-          { label: "קומה תחתונה (PDF)", url: "assets/projects/afikei-hayarden/plan-lower-floor.pdf" },
-          { label: "קומת קרקע מבנה C (PDF)", url: "assets/projects/afikei-hayarden/plan-building-c.pdf" }
+          { label: "קומת כניסה וקרקע (PDF)", url: "afikei-hayarden/plan-entrance-ground.pdf" },
+          { label: "קומה עליונה (PDF)", url: "afikei-hayarden/plan-upper-floor.pdf" },
+          { label: "קומה תחתונה (PDF)", url: "afikei-hayarden/plan-lower-floor.pdf" },
+          { label: "קומת קרקע מבנה C (PDF)", url: "afikei-hayarden/plan-building-c.pdf" }
         ],
         media: [
           {
             type: "render",
             typeLabel: "הדמיית מאסטר-פלאן",
             title: "מבט-על ממעוף הציפור: פריסת המבננים, חצרות חקלאיות וגגות סולאריים",
-            url: "assets/projects/afikei-hayarden/masterplan-aerial.jpg"
+            url: "afikei-hayarden/masterplan-aerial.jpg"
           },
           {
             type: "render",
             typeLabel: "הדמיית פיתוח חוץ",
             title: "חצר מרכזית: גרם מדרגות אדריכלי אדום, קפיטריה, צמחייה ואמפיתיאטרון",
-            url: "assets/projects/afikei-hayarden/courtyard-plaza.jpg"
+            url: "afikei-hayarden/courtyard-plaza.jpg"
           },
           {
             type: "render",
             typeLabel: "הדמיית כניסה",
             title: "שער הכניסה הראשי, גשר עליון מחבר ורחבת כניסה",
-            url: "assets/projects/afikei-hayarden/entrance-gate.jpg"
+            url: "afikei-hayarden/entrance-gate.jpg"
           },
           {
             type: "section",
             typeLabel: "מודל BIM איזומטרי",
             title: "מודל תלת-ממדי: שילוב הטופוגרפיה המדורגת, פרגולות ופתרונות הצללה",
-            url: "assets/projects/afikei-hayarden/bim-axonometric.jpg"
+            url: "afikei-hayarden/bim-axonometric.jpg"
           },
           {
             type: "plan",
             typeLabel: "תוכנית קומת כניסה",
             title: "תוכנית קומת כניסה וקרקע - מלבני + מבננים, מרחבי M21 ומעבדות (PDF)",
-            url: "assets/projects/afikei-hayarden/masterplan-aerial.jpg",
+            url: "afikei-hayarden/masterplan-aerial.jpg",
             isPdfLink: true,
-            pdfUrl: "assets/projects/afikei-hayarden/plan-entrance-ground.pdf"
+            pdfUrl: "afikei-hayarden/plan-entrance-ground.pdf"
           },
           {
             type: "plan",
             typeLabel: "תוכנית קומה עליונה",
             title: "תוכנית קומה עליונה - מרחבי למידה, כיתות ומרפסות (PDF)",
-            url: "assets/projects/afikei-hayarden/bim-axonometric.jpg",
+            url: "afikei-hayarden/bim-axonometric.jpg",
             isPdfLink: true,
-            pdfUrl: "assets/projects/afikei-hayarden/plan-upper-floor.pdf"
+            pdfUrl: "afikei-hayarden/plan-upper-floor.pdf"
           },
           {
             type: "plan",
             typeLabel: "תוכנית קומה תחתונה",
             title: "תוכנית קומה תחתונה - אולם רב-תכליתי, תנועה ופיתוח שטח (PDF)",
-            url: "assets/projects/afikei-hayarden/courtyard-plaza.jpg",
+            url: "afikei-hayarden/courtyard-plaza.jpg",
             isPdfLink: true,
-            pdfUrl: "assets/projects/afikei-hayarden/plan-lower-floor.pdf"
+            pdfUrl: "afikei-hayarden/plan-lower-floor.pdf"
           },
           {
             type: "plan",
             typeLabel: "תוכנית מבנה C",
             title: "תוכנית קומת קרקע מבנה C (PDF)",
-            url: "assets/projects/afikei-hayarden/entrance-gate.jpg",
+            url: "afikei-hayarden/entrance-gate.jpg",
             isPdfLink: true,
-            pdfUrl: "assets/projects/afikei-hayarden/plan-building-c.pdf"
+            pdfUrl: "afikei-hayarden/plan-building-c.pdf"
           }
         ]
       }
@@ -765,6 +765,9 @@
     // Global state
     let currentProjectIndex = 0;
     let currentMediaFilter = 'all';
+
+    // Smart Fallback Resolver for Images & PDFs on GitHub Pages
+    setupAssetFallbacks();
 
     document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('yearSpan').textContent = new Date().getFullYear();
@@ -786,6 +789,84 @@
         }
       });
     });
+
+    /**
+     * Smart Asset & Image Fallback Resolver:
+     * Catches any 404 image load and attempts alternative paths automatically
+     */
+    function setupAssetFallbacks() {
+      window.addEventListener('error', function(e) {
+        const el = e.target;
+        if (el && el.tagName && el.tagName.toLowerCase() === 'img') {
+          const originalSrc = el.getAttribute('data-orig-src') || el.src;
+          if (!el.getAttribute('data-orig-src')) {
+            el.setAttribute('data-orig-src', originalSrc);
+          }
+          
+          let step = parseInt(el.getAttribute('data-fallback-step') || '0', 10) + 1;
+          el.setAttribute('data-fallback-step', step);
+
+          const parts = originalSrc.split('?')[0].split('/');
+          const filename = parts.pop();
+          const folder = parts.pop();
+
+          if (step === 1) {
+            // Attempt 1: try flat root (e.g. courtyard-plaza.jpg on GitHub root)
+            el.src = filename;
+          } else if (step === 2) {
+            // Attempt 2: try with assets/projects/
+            el.src = 'assets/projects/' + (folder ? folder + '/' : '') + filename;
+          } else if (step === 3) {
+            // Attempt 3: try with assets/
+            el.src = 'assets/' + filename;
+          }
+        }
+      }, true);
+    }
+
+    /**
+     * Smart PDF Opener:
+     * Checks if URL exists, and if not, automatically falls back to root or alternative paths
+     */
+    async function smartOpenPdf(event, targetUrl) {
+      if (event) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      if (!targetUrl || targetUrl === '#') return;
+
+      const filename = targetUrl.split('?')[0].split('/').pop();
+
+      // 1. Check primary URL
+      try {
+        const res = await fetch(targetUrl, { method: 'HEAD' });
+        if (res.ok) {
+          window.open(targetUrl, '_blank');
+          return;
+        }
+      } catch (err) {}
+
+      // 2. Check root filename fallback
+      try {
+        const resRoot = await fetch(filename, { method: 'HEAD' });
+        if (resRoot.ok) {
+          window.open(filename, '_blank');
+          return;
+        }
+      } catch (err) {}
+
+      // 3. Check assets/projects/ fallback
+      try {
+        const resAssets = await fetch('assets/projects/' + targetUrl, { method: 'HEAD' });
+        if (resAssets.ok) {
+          window.open('assets/projects/' + targetUrl, '_blank');
+          return;
+        }
+      } catch (err) {}
+
+      // Default: open original
+      window.open(targetUrl, '_blank');
+    }
 
     /**
      * Render Projects and sleek placeholder for upcoming projects
@@ -859,7 +940,7 @@
               <!-- Action Buttons Bar -->
               <div class="pt-5 border-t border-brand-border/60 flex flex-wrap items-center justify-between gap-3">
                 <!-- Direct PDF link -->
-                <a href="${proj.pdfUrl}" target="_blank" 
+                <a href="${proj.pdfUrl}" target="_blank" onclick="smartOpenPdf(event, '${proj.pdfUrl}')"
                    class="inline-flex items-center gap-2 px-4 py-2 text-xs font-medium rounded bg-brand-surface hover:bg-brand-border text-brand-light border border-brand-border transition-colors">
                   <svg class="w-4 h-4 text-brand-rose" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
@@ -945,7 +1026,7 @@
         if (proj.plansList && proj.plansList.length > 0) {
           plansBar.classList.remove('hidden');
           plansButtons.innerHTML = proj.plansList.map(plan => `
-            <a href="${plan.url}" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-brand-charcoal hover:bg-brand-rose hover:text-brand-black text-brand-light border border-brand-border hover:border-brand-rose text-xs font-medium transition-all shadow-sm">
+            <a href="${plan.url}" target="_blank" onclick="smartOpenPdf(event, '${plan.url}')" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-brand-charcoal hover:bg-brand-rose hover:text-brand-black text-brand-light border border-brand-border hover:border-brand-rose text-xs font-medium transition-all shadow-sm">
               <svg class="w-3.5 h-3.5 text-brand-rose" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
               <span>${plan.label}</span>
             </a>
@@ -984,7 +1065,7 @@
 
         if (item.isPdfLink) {
           // Special card for PDF link
-          card.onclick = () => window.open(item.pdfUrl, '_blank');
+          card.onclick = (e) => smartOpenPdf(e, item.pdfUrl);
           card.innerHTML = `
             <div class="h-44 sm:h-52 w-full overflow-hidden relative flex flex-col items-center justify-center bg-brand-charcoal p-4 text-center">
               <div class="w-12 h-12 rounded-full bg-brand-rose/20 text-brand-rose flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
